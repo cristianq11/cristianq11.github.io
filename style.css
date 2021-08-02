@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Pacifico", cursive;
+  background-color: rgb(238, 151, 219);
+}
+.container {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.container .title {
+  font-size: 34px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 7px rgb(0, 0, 0);
+  position: absolute;
+}
+.container .buttons {
+  margin-top: 80px;
+  margin-left: -130px;
+}
+.container .buttons .btn {
+  position: absolute;
+  padding: 5px 20px;
+  font-size: 18px;
+  font-family: "Pacifico", cursive;
+  background-color: rgb(255, 0, 0) ;
+  color: white;
+  border: 2px black solid;
+  border-radius: 5px;
+}
+.container .buttons > #btnno {
+  margin-left: 70px;
+}
+.heart {
+  width: 210px;
+  height: 210px;
+  background-color: rgb(255, 0, 0);
+  transform: rotate(45deg);
+  margin-top: 100px;
+  position: absolute;
+  border-radius: 5px;
+  animation: palpitar 1s linear infinite alternate;
+  will-change: transform;
+}
+.heart:before,
+.heart:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(255, 0, 0);
+  border-radius: 50%;
+}
+.heart:before {
+  top: 0;
+  left: -50%;
+}
+.heart:after {
+  top: -50%;
+  left: 0;
+}
+
+@keyframes palpitar {
+  0% {
+    transform: rotate(45deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+  }
+}
